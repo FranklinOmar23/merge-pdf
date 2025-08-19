@@ -3,9 +3,8 @@
 import { useState, useRef } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/Card"
 import { Input } from "./ui/Input"
-import { Progress } from "./ui/Progress"
 import PDFSteps from "./PDFSteps"
-import { FileText, Download, Upload, X, GripVertical, Scissors, Merge, ImageIcon } from "lucide-react"
+import { FileText, Upload, X, GripVertical, Scissors, Merge, ImageIcon } from "lucide-react"
 import { PDFDocument } from "pdf-lib"
 
 interface FileItem {
