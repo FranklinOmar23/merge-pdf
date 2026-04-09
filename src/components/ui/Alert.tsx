@@ -1,9 +1,15 @@
 import type { ReactNode } from "react"
 
-export function Alert({ children }: { children: ReactNode }) {
-  return (
-    <div className="p-3 rounded-lg bg-red-100 text-red-700 border border-red-300 text-sm">
-      {children}
-    </div>
-  )
+interface AlertProps {
+  children: ReactNode
+  variant?: "error" | "info"
+}
+
+const variantClasses = {
+  error: "border-red-300 bg-red-100 text-red-700",
+  info: "border-blue-300 bg-blue-100 text-blue-700",
+}
+
+export function Alert({ children, variant = "error" }: AlertProps) {
+  return <div className={`rounded-lg border p-3 text-sm ${variantClasses[variant]}`}>{children}</div>
 }
